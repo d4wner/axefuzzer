@@ -1,0 +1,91 @@
+[!]Vuln request:
+GET /phproot/echo.php?xx=133 HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: identity
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+
+
+[!]Vuln type:xss_detect
+[!]Vuln para:xx=133
+[!]Vuln request:
+POST /search.php?test=query HTTP/1.1
+Host: testphp.vulnweb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: identity
+Referer: http://testphp.vulnweb.com/search.php?test=query
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 26
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+searchFor=dasd&goButton=go
+[!]Vuln type:xss_detect
+[!]Vuln para:searchFor=dasd
+[!]Vuln request:
+POST /search.php?test=query HTTP/1.1
+Host: testphp.vulnweb.com
+Proxy-Connection: keep-alive
+Content-Length: 27
+Cache-Control: max-age=0
+Origin: http://testphp.vulnweb.com
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://testphp.vulnweb.com/search.php?test=query
+Accept-Encoding: identity
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: gsScrollPos-604=
+
+searchFor=fffff&goButton=go
+[!]Vuln type:xss_detect
+[!]Vuln para:searchFor=fffff
+[!]Vuln request:
+GET /phproot/echo.php?xx=133 HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: identity
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+
+
+[!]Vuln type:xss_detect
+[!]Vuln para:xx=133
+[!]Vuln request:
+GET /phproot/echo.php?xx=133 HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: identity
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+
+
+[!]Vuln type:url_redirect_detect
+[!]Vuln para:xx=133
+[!]Vuln request:
+GET /phproot/echo.php?xx=133 HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: identity
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+
+
+[!]Vuln type:all
+[!]Vuln para:None
